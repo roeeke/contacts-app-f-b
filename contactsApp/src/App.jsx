@@ -33,7 +33,7 @@ function Contacts() {
   const handleDeleteContact = async (id) => {
     try {
       await axios.post(`http://localhost:8000/api/users/deleteContact/${id}`);
-      fetchContacts(); // Re-fetch contacts to update the list
+      fetchContacts(); 
     } catch (error) {
       console.error("Error deleting contact:", error);
     }
